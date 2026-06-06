@@ -44,10 +44,8 @@ pub fn zed_dir() -> Result<PathBuf> {
 }
 
 pub fn machine_name() -> String {
-    if let Ok(name) = std::env::var("COMPUTERNAME") {
-        if !name.is_empty() {
-            return name;
-        }
+    if let Ok(name) = std::env::var("COMPUTERNAME") && !name.is_empty() {
+        return name;
     }
     if let Ok(output) = std::process::Command::new("hostname").output() {
         let name = String::from_utf8_lossy(&output.stdout).trim().to_string();
