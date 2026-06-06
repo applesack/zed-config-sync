@@ -1,0 +1,19 @@
+[package]
+name = "zed-config-sync"
+version = "0.1.0"
+edition = "2024"
+
+[[bin]]
+name = "zed-config"
+path = "src/main.rs"
+
+[dependencies]
+dirs = "5"
+clap = { version = "4", features = ["derive"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+ureq = { version = "2", features = ["json"] }
+anyhow = "1"
+zip = "2"
+chrono = "0.4"
+base64 = "0.22"
