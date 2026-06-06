@@ -1,11 +1,18 @@
 [package]
 name = "zed-config-sync"
-version = "0.1.0"
+version = "0.2.0"
 edition = "2024"
 
 [[bin]]
 name = "zed-config"
 path = "src/main.rs"
+
+[profile.release]
+opt-level = "z"
+lto = true
+codegen-units = 1
+strip = true
+panic = "abort"
 
 [dependencies]
 dirs = "5"
