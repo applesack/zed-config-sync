@@ -1,0 +1,16 @@
+# yaml-language-server: $schema=https://aka.ms/winget-manifest.defaultLocale.1.10.0.schema.json
+
+PackageIdentifier: Tekkalain.zed-config-sync
+PackageVersion: 0.4.0
+PackageLocale: en-US
+
+Publisher: Tekkalain
+
+PackageName: zed-config-sync
+
+ShortDescription: A command-line tool for syncing Zed settings via GitHub Gist.
+
+License: MIT
+
+ManifestType: defaultLocale
+ManifestVersion: 1.10.0
